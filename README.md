@@ -7,7 +7,7 @@ This game was developed as a Computer Science Project by the students of Grade 1
 - Prashant Giri
 - Praveen Aryal
 - Rashik Poudel
-- Ritesh Patak
+- Ritesh Pathak
 - Tanishq Gautam
 
 ## Technical Details

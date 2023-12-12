@@ -1,5 +1,5 @@
 //This game was developed as Computer Science Project work by the students as per the instructions of the computer department of kmc. 
-//Contributors: Prashant Giri, Praveen Aryal, Rashik Poudel, Ritesh Patak, Tanishq Gautam.
+//Contributors: Prashant Giri, Praveen Aryal, Rashik Poudel, Ritesh Pathak, Tanishq Gautam.
 //Grade 12, KMC, Bagbazar
 
 
