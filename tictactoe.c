@@ -1,11 +1,20 @@
 //This game was developed as Computer Science Project work by the students as per the instructions of the computer department of kmc. 
+
 //Contributors: Prashant Giri, Praveen Aryal, Rashik Poudel, Ritesh Pathak, Tanishq Gautam.
 //Grade 12, KMC, Bagbazar
 
 
+//This game implements 3 helper functions and a main function and relies on a while loop for each set of turns. No GUI is implemented and the game uses console inputs and outputs for playing. Its a p2p game and can also be made into player to computer/ai game but its not in the scope of learning at grade 12.
+//The code has been hosted at https://github.com/Llyr4472/tic-tac-toe
+
+//Difficulties encountered:
+// 1. Verifying each move
+// 2. Keeping track of players and moves
+// 3. Winner/Draw logic implementation
+
+
 //Import header files
 #include <stdio.h>
-#include <conio.h>
 
 //Function declarations
 void printBoard();
@@ -25,7 +34,7 @@ void main(){
    //(-1) means not a win or draw
     while (status==-1)
     {
-        //Which player's turn
+        //Choose the symbol according the player (default player 1 as 'X' )
         char mark ='X';
         if(player==2)
             mark ='O';
@@ -34,17 +43,17 @@ void main(){
         printf("Please enter Number For Player %d\n",player);
         scanf("%d",&input);
 
-        //Verify input
-        if(input<1 || input>9){
+        //Verify input. Checks if input position exists or not (i.e is between 1-9 or not) and if its already taken
+        if((input<1 || input>9) || (board[input] == 'X' || board[input] == 'O')){
             printf("invalid input\n\n");
             continue;
         }
 
-    //printthe move
+    //print the move to the console
     board[input]=mark;
     printBoard();
 
-    //Check for win/draw
+    //gets result of the move fron checkWin function (1=won,0=draw,-1=not won nor draw)
     int result=checkWin();
     if(result==1){
         printf("Player %d is the Winner",player);
@@ -54,7 +63,7 @@ void main(){
         return;
     }
 
-    //End player's turn
+    //Switch player and end the turn
     if(player==1)
         player++;
     else
@@ -129,3 +138,6 @@ int checkWin(){
     //Game hasn't ended
     return -1;
 }
+
+
+//We express our gratitude to the Computer Department at KMC for providing guidance and support throughout the development of this project.
