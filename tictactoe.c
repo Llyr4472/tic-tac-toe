@@ -17,6 +17,8 @@ char board[]={'0','1','2','3','4','5','6','7','8','9'};
 
 //Main game
 void main(){
+
+    //initialize variables and board
     int player=1,input,status=-1;
     printBoard();
    
@@ -34,7 +36,8 @@ void main(){
 
         //Verify input
         if(input<1 || input>9){
-            printf("invalid input");
+            printf("invalid input\n\n");
+            continue;
         }
 
     //printthe move
@@ -63,7 +66,10 @@ void main(){
 
 //Function to print the board
 void printBoard(){
+
+    //clears console (windows specific)
     system("cls");
+
     printf("\n\n");
     printf("=== TIC TAC TOE ===\n\n");
     printf("     |     |     \n");
@@ -107,7 +113,7 @@ int checkWin(){
         return 1;
     }
 
-    //Draw conditions
+    //Draw condition i.e every position has been filled
     int count=0;
     for (int i = 1; i <=9; i++)
     {
